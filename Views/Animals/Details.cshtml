@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Animal_Shelter.Models.Animal
+
+<h2>Animal Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
+<p>@Html.ActionLink("Edit Animal", "Edit", new { id = Model.AnimalId })</p>
+<p>@Html.ActionLink("Delete Animal", "Delete", new { id = Model.AnimalId })</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>
