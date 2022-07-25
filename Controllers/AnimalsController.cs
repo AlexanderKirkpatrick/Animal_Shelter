@@ -18,13 +18,13 @@ namespace Animal_Shelter.Controllers
 
     public ActionResult Index()
     {
-      List<Animal> model = _db.Animals.Include(animal => animal.Type).ToList();
+      List<Animal> model = _db.Animals.Include(animal => animal.Phylum).ToList();
       return View(model);
     }
 
     public ActionResult Create()
     {
-      ViewBag.TypeId = new SelectList(_db.Types, "TypeId", "Name");
+      ViewBag.PhylumId = new SelectList(_db.Phylums, "PhylumId", "Name");
       return View();
     }
 
@@ -45,7 +45,7 @@ namespace Animal_Shelter.Controllers
     public ActionResult Edit(int id)
     {
       Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
-      ViewBag.TypeId = new SelectList(_db.Types, "TypeId", "Name");
+      ViewBag.PhylumId = new SelectList(_db.Phylums, "PhylumId", "Name");
       return View(thisAnimal);
     }
 

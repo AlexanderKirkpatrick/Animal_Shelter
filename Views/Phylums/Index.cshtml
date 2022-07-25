@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Animal_Shelter.Models;
+
+<h1>Phylums</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No Phylums have been added yet!</h3>
+} 
+
+<ul>
+  @foreach(Phylum phylum in Model)
+  {
+    <li>@Html.ActionLink($"{phylum.Name}", "Details", new { id = phylum.PhylumId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add new Phylum", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

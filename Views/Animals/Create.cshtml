@@ -11,8 +11,11 @@
   @Html.LabelFor(model => model.Description)
   @Html.TextBoxFor(model => model.Description)
 
-  @Html.LabelFor(model => model.Type)
-  @Html.DropDownList("TypeId")
+  @Html.LabelFor(model => model.Breed)
+  @Html.TextBoxFor(model => model.Breed)
+
+  @Html.LabelFor(model => model.Phylum)
+  @Html.DropDownList("PhylumId")
 
   <input type="submit" value="Add new Animal" class="btn btn-default" />
 }

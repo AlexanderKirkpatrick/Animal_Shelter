@@ -2,14 +2,14 @@ using System.Collections.Generic;
 
 namespace Animal_Shelter.Models
 {
-  public class Type
+  public class Phylum
   {
-    public Type()
+    public Phylum()
     {
       this.Animals = new HashSet<Animal>();
     }
 
-    public int TypeId { get; set; }
+    public int PhylumId { get; set; }
     public string Name { get; set; }
     public virtual ICollection<Animal> Animals { get; set; }
   }

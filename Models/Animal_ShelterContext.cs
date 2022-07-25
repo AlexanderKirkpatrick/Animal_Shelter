@@ -4,7 +4,7 @@ namespace Animal_Shelter.Models
 {
   public class Animal_ShelterContext : DbContext
   {
-    public DbSet<Type> Types { get; set; }
+    public DbSet<Phylum> Phylums { get; set; }
     public DbSet<Animal> Animals { get; set; }
 
     public Animal_ShelterContext(DbContextOptions options) : base(options) { }
