@@ -9,7 +9,7 @@ namespace Animal_Shelter.Models
     public string Name { get; set; }
     public string Gender { get; set; }
     public string Breed { get; set; }
-    public string EntryDate { get; set; }
+    public DateTime EntryDate { get; set; }
     public int PhylumId { get; set; }
     public virtual Phylum Phylum { get; set; }
   }

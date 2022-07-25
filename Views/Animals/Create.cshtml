@@ -10,14 +10,22 @@
 {
   @Html.LabelFor(model => model.Description)
   @Html.TextBoxFor(model => model.Description)
-
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  @Html.LabelFor(model => model.Gender)
+  @Html.TextBoxFor(model => model.Gender)
   @Html.LabelFor(model => model.Breed)
   @Html.TextBoxFor(model => model.Breed)
+  @Html.LabelFor(model => model.EntryDate)
+  @Html.TextBoxFor(model => model.EntryDate, new { @type = "date" })
 
   @Html.LabelFor(model => model.Phylum)
   @Html.DropDownList("PhylumId")
+  <br>
 
   <input type="submit" value="Add new Animal" class="btn btn-default" />
 }
+<br>
+<br>
 <p>@Html.ActionLink("Show all Animals", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
